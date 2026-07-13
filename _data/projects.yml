@@ -1,0 +1,17 @@
+- title: All the Places KR
+  slug: alltheplaces-kr
+  status: 준비 중
+  description: 공식 All the Places의 한국 spider만 실행해 월간 데이터와 검토용 지도를 제공하는 얇은 레이어입니다.
+  url: /alltheplaces-kr/
+  github: https://github.com/gisdev-kr/alltheplaces-kr
+  accent: cyan
+  tags: [POI, Scrapy, MapLibre]
+- title: gisdev-kr Blog
+  slug: blog
+  status: 운영 중
+  description: 오픈 지리정보를 수집하고 정리하고 보여 주는 과정에서 얻은 개발 기록을 공유합니다.
+  url: /blog/
+  github: https://github.com/gisdev-kr/gisdev-kr.github.io
+  accent: yellow
+  tags: [GIS, Open Data, Devlog]
+

@@ -1,0 +1,16 @@
+- title: 홈
+  url: /
+  icon: home
+- title: 프로젝트
+  url: /projects/
+  icon: map
+- title: 블로그
+  url: /blog/
+  icon: note
+- title: 검색
+  url: /search/
+  icon: search
+- title: 소개
+  url: /about/
+  icon: info
+

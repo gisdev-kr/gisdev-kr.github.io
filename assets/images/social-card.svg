@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#f5e400"/><rect x="760" width="440" height="630" fill="#172b25"/>
+  <g fill="#10120f"><text x="90" y="180" font-family="Arial,sans-serif" font-size="34" font-weight="700">GISDEV-KR · OPEN GEO LAB</text><text x="90" y="310" font-family="Arial,sans-serif" font-size="92" font-weight="900">Open geodata,</text><text x="90" y="415" font-family="Arial,sans-serif" font-size="92" font-weight="900">carefully connected.</text></g>
+  <path d="M965 75l55 35-14 75 48 65-20 82 30 76-51 55-31 94-53-45-33-78 20-83-35-76 45-68-20-73z" fill="#55d6d0"/>
+  <g fill="#fff"><circle cx="949" cy="240" r="10"/><circle cx="1004" cy="349" r="10"/><circle cx="943" cy="440" r="10"/></g>
+</svg>
+

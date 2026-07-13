@@ -1,0 +1,2 @@
+# Google AdSense 승인 후 발급받은 실제 publisher ID로 교체하세요.
+

@@ -1,0 +1,13 @@
+---
+layout: default
+title: 검색
+permalink: /search/
+---
+<section class="listing-page search-page">
+  <header class="listing-header"><p class="eyebrow">SEARCH THE ARCHIVE</p><h1>찾고 싶은<br>기록이 있나요?</h1></header>
+  <label class="search-box"><span>⌕</span><input type="search" data-search-input placeholder="제목, 태그, 내용으로 검색" autocomplete="off"><kbd>/</kbd></label>
+  <p class="search-summary" data-search-summary>검색어를 입력하면 제목과 태그를 찾아봅니다.</p>
+  <div class="post-list" data-search-results></div>
+</section>
+<script>window.GISDEV_SEARCH_INDEX = "{{ '/search.json' | relative_url }}";</script>
+

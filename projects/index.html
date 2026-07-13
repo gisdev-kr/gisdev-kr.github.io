@@ -1,0 +1,13 @@
+---
+layout: page
+title: 프로젝트
+eyebrow: OPEN PROJECTS
+description: gisdev-kr이 운영하는 독립 프로젝트와 실험을 모았습니다.
+permalink: /projects/
+---
+<div class="project-grid wide">
+{% for project in site.data.projects %}
+  <article class="project-card {{ project.accent }}"><div class="project-number">0{{ forloop.index }}</div><div class="project-status"><i></i>{{ project.status }}</div><h2>{{ project.title }}</h2><p>{{ project.description }}</p><div class="tag-row">{% for tag in project.tags %}<span>{{ tag }}</span>{% endfor %}</div><div class="card-links"><a href="{{ project.url | relative_url }}">사이트 ↗</a><a href="{{ project.github }}">GitHub ↗</a></div></article>
+{% endfor %}
+</div>
+

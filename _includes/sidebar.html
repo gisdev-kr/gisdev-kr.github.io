@@ -1,0 +1,30 @@
+<aside class="sidebar" id="site-sidebar" aria-label="주 탐색">
+  <a class="brand" href="{{ '/' | relative_url }}" aria-label="gisdev-kr 홈">
+    <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+    <span><strong>gisdev</strong><small>KR / OPEN GEO LAB</small></span>
+  </a>
+  <nav class="side-nav">
+    {% for item in site.data.navigation %}
+      <a href="{{ item.url | relative_url }}" {% if page.url == item.url %}aria-current="page"{% endif %}>
+        <span class="nav-index">0{{ forloop.index }}</span>
+        <span>{{ item.title }}</span>
+      </a>
+    {% endfor %}
+  </nav>
+  <div class="sidebar-categories">
+    <p class="eyebrow">Categories</p>
+    {% assign categories = site.categories | sort %}
+    {% if categories.size > 0 %}
+      {% for category in categories %}
+        <a href="{{ '/blog/#' | append: category[0] | slugify | relative_url }}">{{ category[0] | replace: '/', ' › ' }} <span>{{ category[1].size }}</span></a>
+      {% endfor %}
+    {% else %}
+      <span class="muted">첫 기록을 준비하고 있습니다.</span>
+    {% endif %}
+  </div>
+  <div class="sidebar-footer">
+    <button class="icon-button" type="button" data-theme-toggle aria-label="색상 테마 전환"><span aria-hidden="true">◐</span></button>
+    <a class="icon-button" href="https://github.com/gisdev-kr" aria-label="GitHub 조직">GH</a>
+    <a class="icon-button" href="{{ '/feed.xml' | relative_url }}" aria-label="RSS 피드">RSS</a>
+  </div>
+</aside>

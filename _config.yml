@@ -1,0 +1,60 @@
+title: gisdev-kr
+tagline: 지리정보를 만들고, 연결하고, 나눕니다
+description: 한국의 오픈 지리정보 개발 기록과 프로젝트를 연결하는 기술 블로그입니다.
+url: https://gisdev-kr.github.io
+baseurl: ""
+lang: ko-KR
+timezone: Asia/Seoul
+author:
+  name: gisdev-kr
+  url: https://github.com/gisdev-kr
+logo: /assets/images/social-card.svg
+
+permalink: /blog/:categories/:year/:month/:day/:title/
+paginate_path: /blog/page:num/
+markdown: kramdown
+kramdown:
+  syntax_highlighter: rouge
+  input: GFM
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: page
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - NOTICE.md
+  - vendor
+
+# Optional analytics and community integrations. Leave blank until configured.
+google_analytics: ""
+goatcounter_code: ""
+adsense_client: ""
+giscus:
+  enabled: false
+  repo: gisdev-kr/gisdev-kr.github.io
+  repo_id: ""
+  category: Announcements
+  category_id: ""
+  mapping: pathname
+
