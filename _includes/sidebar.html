@@ -16,7 +16,8 @@
     {% assign categories = site.categories | sort %}
     {% if categories.size > 0 %}
       {% for category in categories %}
-        <a href="{{ '/blog/#' | append: category[0] | slugify | relative_url }}">{{ category[0] | replace: '/', ' › ' }} <span>{{ category[1].size }}</span></a>
+        {% assign category_slug = category[0] | slugify %}
+        <a href="{{ '/blog/#' | append: category_slug | relative_url }}">{{ category[0] | replace: '/', ' › ' }} <span>{{ category[1].size }}</span></a>
       {% endfor %}
     {% else %}
       <span class="muted">첫 기록을 준비하고 있습니다.</span>

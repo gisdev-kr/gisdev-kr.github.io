@@ -1,6 +1,6 @@
 - title: All the Places KR
   slug: alltheplaces-kr
-  status: 준비 중
+  status: 운영 중
   description: 공식 All the Places의 한국 spider만 실행해 월간 데이터와 검토용 지도를 제공하는 얇은 레이어입니다.
   url: /alltheplaces-kr/
   github: https://github.com/gisdev-kr/alltheplaces-kr
@@ -14,4 +14,3 @@
   github: https://github.com/gisdev-kr/gisdev-kr.github.io
   accent: yellow
   tags: [GIS, Open Data, Devlog]
-
