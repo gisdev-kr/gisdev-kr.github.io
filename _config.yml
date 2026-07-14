@@ -1,6 +1,6 @@
 title: gisdev-kr
-tagline: 지리정보를 만들고, 연결하고, 나눕니다
-description: 한국의 오픈 지리정보 개발 기록과 프로젝트를 연결하는 기술 블로그입니다.
+tagline: GIS 프로젝트와 개발 기록
+description: GIS 개발 기록과 프로젝트를 모으는 사이트입니다.
 url: https://gisdev-kr.github.io
 baseurl: ""
 lang: ko-KR
@@ -48,13 +48,12 @@ exclude:
 
 # Optional analytics and community integrations. Leave blank until configured.
 google_analytics: ""
-goatcounter_code: ""
+goatcounter_code: "gisdev-kr"
 adsense_client: ""
 giscus:
-  enabled: false
+  enabled: true
   repo: gisdev-kr/gisdev-kr.github.io
-  repo_id: ""
+  repo_id: "R_kgDOTXOpnw"
   category: Announcements
-  category_id: ""
+  category_id: "DIC_kwDOTXOpn84DBHUJ"
   mapping: pathname
-
