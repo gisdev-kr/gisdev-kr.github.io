@@ -1,5 +1,16 @@
-<header class="mobile-header">
-  <a class="mobile-brand" href="{{ '/' | relative_url }}">gisdev<span>.kr</span></a>
-  <button class="menu-button" type="button" data-menu-toggle aria-controls="site-sidebar" aria-expanded="false">메뉴</button>
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="site-logo" href="{{ '/' | relative_url }}" aria-label="GISdev-kr 홈">GISdev-kr</a>
+    <button class="nav-toggle" type="button" data-nav-toggle aria-controls="site-navigation" aria-expanded="false">
+      <span></span><span></span><span></span><span class="sr-only">메뉴</span>
+    </button>
+    <nav class="site-nav" id="site-navigation" data-site-nav aria-label="주 탐색">
+      {% for item in site.data.navigation %}
+        <a href="{{ item.url | relative_url }}" {% if page.url == item.url or item.url == '/blog/' and page.layout == 'post' %}aria-current="page"{% endif %}>{{ item.title }}</a>
+      {% endfor %}
+    </nav>
+    <button class="theme-toggle" type="button" data-theme-toggle aria-label="색상 테마 전환">
+      <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3v2m0 14v2M3 12h2m14 0h2M5.64 5.64l1.42 1.42m9.88 9.88 1.42 1.42m0-12.72-1.42 1.42M7.06 16.94l-1.42 1.42"></path><circle cx="12" cy="12" r="4"></circle></svg>
+    </button>
+  </div>
 </header>
-

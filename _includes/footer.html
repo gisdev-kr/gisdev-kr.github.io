@@ -1,10 +1,24 @@
 <footer class="site-footer">
-  <p>© {{ 'now' | date: '%Y' }} gisdev-kr</p>
-  <nav aria-label="정책 링크">
-    <a href="{{ '/privacy/' | relative_url }}">개인정보처리방침</a>
-    <a href="{{ '/contact/' | relative_url }}">연락처</a>
-    <a href="https://github.com/gisdev-kr">GitHub</a>
-  </nav>
+  <div class="footer-main">
+    <div>
+      <strong class="footer-title">GISdev-kr</strong>
+      <a class="footer-url" href="https://gisdev-kr.github.io/">https://gisdev-kr.github.io/</a>
+    </div>
+    <nav class="footer-social" aria-label="외부 링크">
+      <a href="https://github.com/gisdev-kr" aria-label="gisdev-kr GitHub">
+        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 .7a11.5 11.5 0 0 0-3.64 22.4c.58.1.79-.25.79-.56v-2.23c-3.22.7-3.9-1.37-3.9-1.37-.52-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.17.08 1.78 1.19 1.78 1.19 1.04 1.78 2.72 1.27 3.38.97.1-.75.4-1.27.74-1.56-2.57-.29-5.27-1.28-5.27-5.69 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.47.11-3.05 0 0 .97-.31 3.16 1.18a10.9 10.9 0 0 1 5.76 0c2.2-1.49 3.16-1.18 3.16-1.18.63 1.58.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.09 0 4.42-2.71 5.39-5.29 5.68.42.36.79 1.06.79 2.15v3.19c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7Z"></path></svg>
+        <span>GitHub</span>
+      </a>
+      <a href="{{ '/feed.xml' | relative_url }}" aria-label="RSS 피드">
+        <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="5" cy="19" r="2"></circle><path d="M4 4a16 16 0 0 1 16 16M4 10a10 10 0 0 1 10 10"></path></svg>
+        <span>RSS</span>
+      </a>
+    </nav>
+  </div>
+  <div class="footer-bottom">
+    <p>© {{ 'now' | date: '%Y' }} GISdev-kr</p>
+    <nav aria-label="정책 링크"><a href="{{ '/privacy/' | relative_url }}">개인정보처리방침</a><a href="{{ '/contact/' | relative_url }}">연락처</a></nav>
+  </div>
 </footer>
 {% if site.google_analytics != "" %}
 <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
