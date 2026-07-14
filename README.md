@@ -24,6 +24,8 @@ Set values in `_config.yml` only after the corresponding service is configured:
 
 All optional integrations fail open: posts, navigation, search, and downloads remain usable when they are disabled or blocked.
 
+Paperlogy Regular, SemiBold, Bold, and ExtraBold WOFF2 files are bundled under `assets/fonts/` so the primary typography does not depend on an external font CDN.
+
 ## License
 
 MIT. See [LICENSE](LICENSE) and [NOTICE.md](NOTICE.md).

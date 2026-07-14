@@ -8,15 +8,15 @@
     document.querySelector(".giscus-frame")?.contentWindow?.postMessage({giscus:{setConfig:{theme:root.dataset.theme}}}, "https://giscus.app");
   });
 
-  const sidebar = document.querySelector("#site-sidebar");
-  const menuButton = document.querySelector("[data-menu-toggle]");
-  const scrim = document.querySelector("[data-menu-scrim]");
-  const setMenu = (open) => {
-    sidebar?.classList.toggle("open", open); scrim?.classList.toggle("open", open);
-    menuButton?.setAttribute("aria-expanded", String(open)); document.body.style.overflow = open ? "hidden" : "";
+  const nav = document.querySelector("[data-site-nav]");
+  const navButton = document.querySelector("[data-nav-toggle]");
+  const setNav = (open) => {
+    nav?.classList.toggle("open", open);
+    navButton?.setAttribute("aria-expanded", String(open));
   };
-  menuButton?.addEventListener("click", () => setMenu(!sidebar?.classList.contains("open")));
-  scrim?.addEventListener("click", () => setMenu(false));
+  navButton?.addEventListener("click", () => setNav(!nav?.classList.contains("open")));
+  nav?.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => setNav(false)));
+  window.addEventListener("resize", () => { if (window.innerWidth > 760) setNav(false); });
 
   document.querySelectorAll(".prose pre").forEach((pre) => {
     const button = document.createElement("button"); button.className = "copy-code"; button.type = "button"; button.textContent = "COPY";

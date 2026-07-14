@@ -1,7 +1,7 @@
 - title: All the Places KR
   slug: alltheplaces-kr
   status: 운영 중
-  description: All the Places의 한국 spider 데이터를 정기 수집해 지도와 파일로 제공합니다.
+  description: 한국 POI 데이터
   url: /alltheplaces-kr/
   github: https://github.com/gisdev-kr/alltheplaces-kr
   accent: cyan

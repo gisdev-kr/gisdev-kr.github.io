@@ -5,7 +5,7 @@ description: GIS 개발과 오픈 데이터 운영 기록
 permalink: /blog/
 ---
 <section class="listing-page">
-  <header class="listing-header"><p class="eyebrow">FIELD NOTES / {{ site.posts.size }} ENTRIES</p><h1>개발 기록</h1><p>데이터를 모으는 코드부터 지도 위에 보여 주는 화면까지, 결정의 이유를 남깁니다.</p></header>
+  <header class="listing-header"><p class="eyebrow">BLOG / {{ site.posts.size }} ENTRIES</p><h1>개발 기록</h1><p>GIS, POI 데이터와 지도 개발 기록을 정리합니다.</p></header>
   <div class="category-tabs"><button class="active" data-category="all">전체</button>{% for category in site.categories %}<button id="{{ category[0] | slugify }}" data-category="{{ category[0] | slugify }}">{{ category[0] }} <span>{{ category[1].size }}</span></button>{% endfor %}</div>
   <div class="post-list">
     {% for post in site.posts %}<article class="post-row" data-post-category="{{ post.categories | join: ' ' | slugify }}"><time>{{ post.date | date: '%Y.%m.%d' }}</time><div><p class="eyebrow">{{ post.categories | join: ' / ' }}</p><h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2><p>{{ post.excerpt | strip_html | truncate: 150 }}</p><div class="tag-row">{% for tag in post.tags %}<span>#{{ tag }}</span>{% endfor %}</div></div><a class="row-arrow" href="{{ post.url | relative_url }}" aria-label="{{ post.title }} 읽기">↗</a></article>{% endfor %}
