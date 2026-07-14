@@ -1,9 +1,8 @@
-<aside class="ad-slot" aria-label="광고 영역">
-  {% if site.adsense_client != "" %}
-    <ins class="adsbygoogle" style="display:block" data-ad-client="{{ site.adsense_client }}" data-ad-format="auto" data-full-width-responsive="true"></ins>
-    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-  {% else %}
-    <span>AD SPACE</span><small>콘텐츠 흐름을 방해하지 않는 광고 영역</small>
-  {% endif %}
+{% if site.adsense_enabled and site.adsense_client != "" %}
+<aside class="ad-popup" data-ad-popup aria-label="광고 영역">
+  <button type="button" data-ad-close aria-label="광고 닫기">×</button>
+  <span>ADVERTISEMENT</span>
+  <ins class="adsbygoogle" style="display:block" data-ad-client="{{ site.adsense_client }}" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </aside>
-
+{% endif %}

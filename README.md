@@ -21,6 +21,11 @@ Set values in `_config.yml` only after the corresponding service is configured:
 - `goatcounter_code`: GoatCounter site code
 - `giscus`: repository/category identifiers after installing the Giscus GitHub App
 - `adsense_client`: AdSense publisher ID after approval
+- `adsense_enabled`: `true` only when the dismissible bottom ad container should be rendered
+
+The small page/whole-site counters use GoatCounter's public visitor-counter
+endpoint. Enable **Allow adding visitor counts on your website** in GoatCounter
+settings; otherwise the site intentionally leaves both values as `—`.
 
 All optional integrations fail open: posts, navigation, search, and downloads remain usable when they are disabled or blocked.
 

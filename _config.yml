@@ -50,6 +50,7 @@ exclude:
 google_analytics: ""
 goatcounter_code: "gisdev-kr"
 adsense_client: ""
+adsense_enabled: false
 giscus:
   enabled: true
   repo: gisdev-kr/gisdev-kr.github.io
