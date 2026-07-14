@@ -13,7 +13,7 @@ description: GIS 프로젝트와 개발 기록을 담는 웹매거진입니다.
   <section class="magazine-search-section" aria-label="블로그 검색">
     <form class="magazine-search" action="{{ '/search/' | relative_url }}" method="get" role="search">
       <label class="sr-only" for="home-search-input">블로그 검색</label>
-      <input id="home-search-input" name="q" type="search" placeholder="관심 있는 기록을 찾아보세요" autocomplete="off">
+      <input id="home-search-input" name="q" type="search" autocomplete="off">
       <button type="submit">
         <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="m16.5 16.5 4 4"></path></svg>
         <span>검색</span>
@@ -38,7 +38,7 @@ description: GIS 프로젝트와 개발 기록을 담는 웹매거진입니다.
     {% assign latest_post = site.posts.first %}
     {% if latest_post %}
       <a class="featured-post" href="{{ latest_post.url | relative_url }}">
-        <div class="featured-post-index" aria-hidden="true">NEW</div>
+        <div class="featured-post-cover" aria-hidden="true"><span>POI · 01</span><strong>DATA<br>REVIEW</strong></div>
         <div class="featured-post-content">
           <div class="post-kicker"><time datetime="{{ latest_post.date | date_to_xmlschema }}">{{ latest_post.date | date: '%Y.%m.%d' }}</time><span>{{ latest_post.categories | join: ' · ' }}</span></div>
           <h3>{{ latest_post.title }}</h3>
@@ -56,12 +56,12 @@ description: GIS 프로젝트와 개발 기록을 담는 웹매거진입니다.
     <header class="magazine-section-heading"><span>03</span><h2>최근 글</h2><a href="{{ '/blog/' | relative_url }}">전체 보기 ↗</a></header>
     {% assign recent_count = site.posts.size | minus: 1 %}
     {% if recent_count > 0 %}
-      <div class="recent-list">
+      <div class="recent-grid">
         {% for post in site.posts offset:1 %}
-          <a class="recent-item" href="{{ post.url | relative_url }}">
-            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%Y.%m.%d' }}</time>
-            <div><span>{{ post.categories | join: ' · ' }}</span><h3>{{ post.title }}</h3><p>{{ post.description | default: post.excerpt | strip_html | truncate: 130 }}</p></div>
-            <span class="recent-arrow" aria-hidden="true">↗</span>
+          {% assign card_number = forloop.index | plus: 1 %}
+          <a class="recent-card" href="{{ post.url | relative_url }}">
+            <div class="recent-card-cover" aria-hidden="true"><span>0{{ card_number }}</span><strong>{{ post.categories | first }}</strong></div>
+            <div class="recent-card-body"><div class="recent-card-meta"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%Y.%m.%d' }}</time><span>{{ post.categories | join: ' · ' }}</span></div><h3>{{ post.title }}</h3><p>{{ post.description | default: post.excerpt | strip_html | truncate: 130 }}</p></div>
           </a>
         {% endfor %}
       </div>
