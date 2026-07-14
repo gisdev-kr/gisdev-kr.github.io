@@ -18,6 +18,20 @@
   nav?.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => setNav(false)));
   window.addEventListener("resize", () => { if (window.innerWidth > 760) setNav(false); });
 
+  const traffic = document.querySelector("[data-page-traffic]");
+  if (traffic) {
+    const code = traffic.dataset.goatcounterCode;
+    const fetchCount = async (path) => {
+      const response = await fetch(`https://${code}.goatcounter.com/counter/${encodeURIComponent(path)}.json`);
+      if (!response.ok) throw new Error(`GoatCounter ${response.status}`);
+      return (await response.json()).count || "—";
+    };
+    fetchCount(location.pathname).then((count) => { traffic.querySelector("[data-page-count]").textContent = count; }).catch(() => {});
+    fetchCount("TOTAL").then((count) => { traffic.querySelector("[data-total-count]").textContent = count; }).catch(() => {});
+  }
+
+  document.querySelector("[data-ad-close]")?.addEventListener("click", () => document.querySelector("[data-ad-popup]")?.remove());
+
   document.querySelectorAll(".prose pre").forEach((pre) => {
     const button = document.createElement("button"); button.className = "copy-code"; button.type = "button"; button.textContent = "COPY";
     button.addEventListener("click", async () => { await navigator.clipboard.writeText(pre.querySelector("code")?.textContent || pre.textContent || ""); button.textContent = "COPIED"; setTimeout(() => button.textContent = "COPY", 1400); });
